@@ -14,19 +14,26 @@
 ## **四、实验步骤**
 ### 一、Systmed入门教程：命令篇
 - 系统管理
+
 [![asciicast](https://asciinema.org/a/6tCv8ACnfB7fHYGMVSF0HyQkq.svg)](https://asciinema.org/a/6tCv8ACnfB7fHYGMVSF0HyQkq)
 - Unit
+
 [![asciicast](https://asciinema.org/a/W5AdyvHDvqtw7hlmrYyErUqvZ.svg)](https://asciinema.org/a/W5AdyvHDvqtw7hlmrYyErUqvZ)
 - Unit的配置文件
+
 [![asciicast](https://asciinema.org/a/DdnhEx42kZSIUR5aWXATk3vbi.svg)](https://asciinema.org/a/DdnhEx42kZSIUR5aWXATk3vbi)
 - Target
+
 [![asciicast](https://asciinema.org/a/sTRxIsZtskiFCfx6W87buaD1V.svg)](https://asciinema.org/a/sTRxIsZtskiFCfx6W87buaD1V)
 - 日志管理
+
 [![asciicast](https://asciinema.org/a/DrD85jTZkz6cSraihswESD5Bs.svg)](https://asciinema.org/a/DrD85jTZkz6cSraihswESD5Bs)
 ### 二、Systmed入门教程：实战篇
 - 开机启动，启动服务，停止服务，查看配置文件
+
 [![asciicast](https://asciinema.org/a/IAhOxmB8NSLHWYVDXJY9nYHOX.svg)](https://asciinema.org/a/IAhOxmB8NSLHWYVDXJY9nYHOX)
 -  [Unit] 区块：启动顺序与依赖关系，[Service] 区块：启动行为，[Install] 区块，Target的配置文件，修改配置文件后重启
+
 [![asciicast](https://asciinema.org/a/dD7iQvzzykfBxBRjejQzHzB8k.svg)](https://asciinema.org/a/dD7iQvzzykfBxBRjejQzHzB8k)
 ## **五、自查清单**
 1. 如何添加一个用户并使其具备sudo执行程序的权限？
