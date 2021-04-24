@@ -8,6 +8,16 @@ function help {
     echo "-s URL  给定URL输出TOP 100访问来源主机"
     echo "-h      帮助文档"
 }
+
+CheckFile(){
+    if [[ ! -f "web_log.tsv.7z" ]];then
+        wget https://c4pr1c3.github.io/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z
+        7z x web_log.tsv.7z
+    elif [[ ! -f "web_log.tsv" ]];then
+        7z x web_log.tsv.7z
+    fi
+}
+
 # 统计访问来源主机TOP 100和分别对应出现的总次数
 #sort -g -k 2 -r其中的2表示对第二列数据进行比较，而我输出的第二列数据为出现次数，因此是按照出现次数进行比较。注意输出时的|算是第一列
 function CountHost {
@@ -119,6 +129,9 @@ function FindHost {
     }
     ' web_log.tsv | sort -g -k 1 -r | head -100
 }
+
+# 先检查文件有没有，没有就下载
+CheckFile
 
 if [ "$1" != "" ];then #判断是什么操作
     case "$1" in

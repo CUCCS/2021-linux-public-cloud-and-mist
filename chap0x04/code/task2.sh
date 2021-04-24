@@ -6,6 +6,13 @@ function help {
     echo "-ma                 年龄最大的球员是谁？年龄最小的球员是谁？"
     echo "-h                 帮助文档"
 }
+#首先检查有没有这个文件，如果没有的话要进行下载
+CheckFile(){
+    if [[ ! -f "worldcupplayerinfo.tsv" ]];then
+        wget https://raw.githubusercontent.com/EddieXu1125/LinuxSysAdmin/master/exp/chap0x04/worldcupplayerinfo.tsv
+    fi
+}
+
 #统计不同年龄区间范围（20岁以下、[20-30]、30岁以上）的球员数量、百分比
 #-F指定分隔符
 #$2!="Country"这个条件放在这里是为了略过第一行，如果第一行加入计算会出现问题
@@ -78,6 +85,9 @@ function AgeLength {
     }
     ' worldcupplayerinfo.tsv
 }
+
+# 先检查文件有没有，没有就下载
+CheckFile
 
 if [ "$1" != "" ];then #判断是什么操作
     case "$1" in
