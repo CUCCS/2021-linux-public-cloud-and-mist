@@ -31,6 +31,7 @@
 - [x] 分别统计不同4XX状态码对应的TOP 10 URL和对应出现的总次数
 - [x] 给定URL输出TOP 100访问来源主机
 ## **五、实验步骤**
+### **※测试结果在[travis](https://travis-ci.com/github/cloud-and-mist/shell-homework)中查看**
 ### **任务一**
 - 安装```imagemagick```
 ```bash
