@@ -1,0 +1,42 @@
+language: bash
+
+before_install:
+  - sudo apt-get update && sudo apt-get install -y shellcheck
+  - sudo apt-get install imagemagick 
+  - sudo apt-get install p7zip-full 
+
+script:
+  - ls -l
+  - shellcheck task1.sh
+  - echo Task1
+  - echo "=============================="
+  - bash task1.sh -h
+  - bash task1.sh -c 50
+  - bash task1.sh -r 30
+  - bash task1.sh -w hello 50 North
+  - bash task1.sh -p hello
+  - bash task1.sh -s suff
+  - bash task1.sh -t
+  - echo "=============================="
+  - shellcheck task2.sh
+  - echo Task2
+  - echo "=============================="
+  - bash task2.sh -h
+  - bash task2.sh -a
+  - bash task2.sh -p
+  - bash task2.sh -mn
+  - bash task2.sh -ma
+  - echo "=============================="
+  - shellcheck task3.sh
+  - echo Task3
+  - bash task3.sh -h
+  - bash task3.sh -a
+  - bash task3.sh -b
+  - bash task3.sh -u
+  - bash task3.sh -p
+  - bash task3.sh -f
+  - bash task3.sh -s /images/USA-logosmall.gif
+
+notifications:
+  email:
+    on_success: never
